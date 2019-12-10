@@ -44,7 +44,7 @@ while True:
   # Check for valid entry and handle errors
   try:
     OrderNum = int(MenuItem)
-    if OrderNum<1 or OrderNum > len(OrderMenu)-1:
+    if OrderNum<1 or OrderNum > len(OrderMenu):
       print("Wrong number.  It's ok though, math is hard.")
     else:
       OrderNum = int(MenuItem)
@@ -54,7 +54,7 @@ while True:
 
 
       your current order is:""")
-      for i in range (0, len(OrderMenu)-1):
+      for i in range (0, len(OrderMenu)):
         print(f"{i+1}:  ({OrderMenu[i][1]}x) " + OrderMenu[i][0])
       print("Choose your next item, or type Q to quit, or Done to finish the transaction")
   except:
